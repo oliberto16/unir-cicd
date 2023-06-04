@@ -16,7 +16,7 @@ class TestCalculate(unittest.TestCase):
 
     # Test ADD Method
     def test_add_method_returns_correct_result(self):
-        self.assertEqual(4, self.calc.add(2, 2))
+        self.assertEqual(6, self.calc.add(2, 2))
         self.assertEqual(0, self.calc.add(2, -2))
         self.assertEqual(0, self.calc.add(-2, 2))
         self.assertEqual(5, self.calc.add(5, 0))
