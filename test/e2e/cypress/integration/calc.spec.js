@@ -49,8 +49,7 @@ context('Calc', () => {
 
   it('increases the history log', () => {
     cy.get('#button-add').click().click().click()
-    cy.get('#history-log').children().its('length')
-    .should('eq', 3)
+    cy.get('#history-log').children().its('length').should('eq', 3)
     cy.screenshot()
   })
 
