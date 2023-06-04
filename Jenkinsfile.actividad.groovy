@@ -67,7 +67,6 @@ pipeline {
             cleanWs()
         }
         failure {
-            emailext subject: "Pipeline error", to: "devops@unir.net,devs@unir.net"
             // Send mail with Email Extension Plugin (Configure SMTP Jenkins)
             /*emailext (
                 to: 'example@maildestino.com',
