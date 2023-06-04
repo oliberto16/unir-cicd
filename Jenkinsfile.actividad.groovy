@@ -49,7 +49,7 @@ pipeline {
             //Simulate send mail with echo in Console
             echo "to: example@maildestino.com"
             echo "subject: Job ${env.JOB_NAME} SUCCESS - Execution #${env.BUILD_NUMBER}"
-            echo "body: A pipeline failure has occurred. See the Jenkins logs for more details: ${env.JENKINS_URL}/job/${env.JOB_NAME}/${env.BUILD_NUMBER}/testReport"
+            echo "body: A pipeline SUCCESS has finished. See the Jenkins logs for more details: ${env.JENKINS_URL}/job/${env.JOB_NAME}/${env.BUILD_NUMBER}/testReport"
             cleanWs()
         }
         unstable {
@@ -63,7 +63,7 @@ pipeline {
             //Simulate send mail with echo in Console
             echo "to: example@maildestino.com"
             echo "subject: Job ${env.JOB_NAME} UNSTABLE - Execution #${env.BUILD_NUMBER}"
-            echo "body: A pipeline failure has occurred. See the Jenkins logs for more details: ${env.JENKINS_URL}/job/${env.JOB_NAME}/${env.BUILD_NUMBER}/testReport"
+            echo "body: A pipeline UNSTABLE has occurred. See the Jenkins logs for more details: ${env.JENKINS_URL}/job/${env.JOB_NAME}/${env.BUILD_NUMBER}/testReport"
             cleanWs()
         }
         failure {
